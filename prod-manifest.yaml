@@ -34,7 +34,7 @@ spec:
             - name: TWILIO_AUTH_TOKEN
               valueFrom:
                 secretKeyRef:
-                  name: secret/mike-twilio-dev
+                  name: mike-twilio-dev
                   key: twilio_token
           ports:
             - containerPort: 443
