@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: prod-stedi-mike
-          image: us-docker.pkg.dev/my-devops-team/mike-api/stedi-api:latest # This image needs to refer to the NEW Artifact registry repositorry
+          image: us-docker.pkg.dev/w09-project/mike-api/stedi-api # This image needs to refer to the NEW Artifact registry repositorry
           env:
             - name: REDIS_PASSWORD
               valueFrom:
