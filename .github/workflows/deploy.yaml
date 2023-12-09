@@ -53,7 +53,7 @@ jobs:
     - name: Build
       run: |-
         docker build \
-          --tag "us-docker.pkg.dev/w09-project/mike-api/stedi-api@sha256:4a95c24fd4153d6ee1a10f361cce51a2394726583d5d5e5eeb53783f54773b3c" \
+          --tag "us-docker.pkg.dev/w09-project/mike-api/stedi-api:latest" \
           --build-arg GITHUB_SHA="$GITHUB_SHA" \
           --build-arg GITHUB_REF="$GITHUB_REF" \
           .
@@ -61,7 +61,7 @@ jobs:
     # Push the Docker image to Google Container Registry
     - name: Publish
       run: |-
-        docker push "us-docker.pkg.dev/w09-project/mike-api/stedi-api@sha256:4a95c24fd4153d6ee1a10f361cce51a2394726583d5d5e5eeb53783f54773b3c"
+        docker push "us-docker.pkg.dev/w09-project/mike-api/stedi-api:lates"
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
