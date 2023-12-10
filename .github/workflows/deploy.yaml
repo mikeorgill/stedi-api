@@ -61,7 +61,7 @@ jobs:
     # Push the Docker image to Google Container Registry
     - name: Publish
       run: |-
-        docker push "us-docker.pkg.dev/w09-project/mike-api/stedi-api:lates"
+        docker push "us-docker.pkg.dev/w09-project/mike-api/stedi-api:latest"
 
     # Deploy the Docker image to the GKE cluster
     - name: Deploy
